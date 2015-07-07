@@ -9,4 +9,3 @@ Supported Format:
     Code 128
     QR Code
     PDF 417
-
