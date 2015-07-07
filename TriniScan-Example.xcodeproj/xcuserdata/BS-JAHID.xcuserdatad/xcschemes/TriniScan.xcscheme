@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AFD81D291B4BDA9800FD49D5"
-               BuildableName = "TriniScan.app"
-               BlueprintName = "TriniScan"
-               ReferencedContainer = "container:TriniScan.xcodeproj">
+               BuildableName = "TriniScan-Example.app"
+               BlueprintName = "TriniScan-Example"
+               ReferencedContainer = "container:TriniScan-Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AFD81D421B4BDA9A00FD49D5"
-               BuildableName = "TriniScanTests.xctest"
-               BlueprintName = "TriniScanTests"
-               ReferencedContainer = "container:TriniScan.xcodeproj">
+               BuildableName = "TriniScan-ExampleTests.xctest"
+               BlueprintName = "TriniScan-ExampleTests"
+               ReferencedContainer = "container:TriniScan-Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AFD81D421B4BDA9A00FD49D5"
-               BuildableName = "TriniScanTests.xctest"
-               BlueprintName = "TriniScanTests"
-               ReferencedContainer = "container:TriniScan.xcodeproj">
+               BuildableName = "TriniScan-ExampleTests.xctest"
+               BlueprintName = "TriniScan-ExampleTests"
+               ReferencedContainer = "container:TriniScan-Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AFD81D291B4BDA9800FD49D5"
-            BuildableName = "TriniScan.app"
-            BlueprintName = "TriniScan"
-            ReferencedContainer = "container:TriniScan.xcodeproj">
+            BuildableName = "TriniScan-Example.app"
+            BlueprintName = "TriniScan-Example"
+            ReferencedContainer = "container:TriniScan-Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AFD81D291B4BDA9800FD49D5"
-            BuildableName = "TriniScan.app"
-            BlueprintName = "TriniScan"
-            ReferencedContainer = "container:TriniScan.xcodeproj">
+            BuildableName = "TriniScan-Example.app"
+            BlueprintName = "TriniScan-Example"
+            ReferencedContainer = "container:TriniScan-Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AFD81D291B4BDA9800FD49D5"
-            BuildableName = "TriniScan.app"
-            BlueprintName = "TriniScan"
-            ReferencedContainer = "container:TriniScan.xcodeproj">
+            BuildableName = "TriniScan-Example.app"
+            BlueprintName = "TriniScan-Example"
+            ReferencedContainer = "container:TriniScan-Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
