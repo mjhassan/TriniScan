@@ -7,7 +7,6 @@
 //
 
 #import "TDScannerViewController.h"
-#import "TDScanAnimeView.h"
 
 @interface TDScannerViewController () {
     AVCaptureDevice*            _device;
@@ -47,6 +46,7 @@
 }
 
 - (IBAction)close:(id)sender {
+    [self stopScaning];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

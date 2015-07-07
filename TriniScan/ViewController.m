@@ -36,6 +36,7 @@
 
 #pragma mark-
 - (void)scanDidSucceededWithResult:(NSString *)stringResult {
+    /*
     NSArray* infoArray = nil;
     if([stringResult containsString:@"\n"])
         infoArray = [stringResult componentsSeparatedByString:@"\n"];
@@ -89,9 +90,9 @@
     [contact setValue:[NSString stringWithFormat:@"%@ %@", [contact objectForKey:@"FirstName"], [contact objectForKey:@"LastName"]] forKey:@"NameOnAgreement"];
     
     infoArray = nil;
-    
+    */
 //    NSLog(@"%@", contact);
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Got Information" message:contact.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Got Information" message:stringResult delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
 
