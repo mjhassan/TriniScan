@@ -1,6 +1,7 @@
 # TriniScan
 
 Supported Format:
+
     UPC-E
     EAN-8 and EAN-13
     Code 39
