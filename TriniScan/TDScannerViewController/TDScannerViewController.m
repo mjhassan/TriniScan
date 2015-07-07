@@ -7,6 +7,7 @@
 //
 
 #import "TDScannerViewController.h"
+#import "TDScanAnimeView.h"
 
 @interface TDScannerViewController () {
     AVCaptureDevice*            _device;
@@ -16,6 +17,8 @@
     AVCaptureVideoPreviewLayer* _previewLayer;
     
     UIView*                     _highlightView;
+    UIView*                     laserView;
+    CGRect                      _selfBounds;
 }
 
 @end
@@ -33,7 +36,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     if(_session) {
         [self autoRotateVideoOrientation];
-        [_session startRunning];
+        [self startScaning];
     }else {
         // show alert
     }
@@ -88,11 +91,46 @@
     _previewLayer.videoGravity  = AVLayerVideoGravityResizeAspectFill;
     [self.view.layer addSublayer:_previewLayer];
     
-    [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:closeButton];
 }
 
+- (void)startScaning {
+    [_session startRunning];
+    [self startOrAdjustLeaser];
+}
 
+- (void)stopScaning {
+    [_session stopRunning];
+    
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        laserView.alpha = 0.0;
+    }];
+}
+
+- (void)startOrAdjustLeaser {
+    [laserView removeFromSuperview];
+    laserView = nil;
+    
+    laserView = [[UIView alloc] initWithFrame:CGRectMake(0, 0.25*_selfBounds.size.height, _selfBounds.size.width, 1)];
+    laserView.backgroundColor = [UIColor redColor];
+    laserView.layer.shadowColor = [UIColor redColor].CGColor;
+    laserView.layer.shadowOffset = CGSizeMake(0.5, 0.5);
+    laserView.layer.shadowOpacity = 0.6;
+    laserView.layer.shadowRadius = 1.5;
+    laserView.alpha = 0.0;
+    if (![self.view.subviews containsObject:laserView])
+        [self.view addSubview:laserView];
+    
+    // Add the line
+    [UIView animateWithDuration:0.2 animations:^{
+        laserView.alpha = 1.0;
+    }];
+    
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+        laserView.frame = CGRectMake(0, 0.75*_selfBounds.size.height, _selfBounds.size.width, 1);
+    } completion:nil];
+}
 
 - (void)configureCameraForHighestFrameRate:(AVCaptureDevice *)device {
     AVCaptureDeviceFormat *bestFormat = nil;
@@ -129,7 +167,9 @@
 - (void)autoRotateVideoOrientation {
     if(!_previewLayer) return;
     
-    [_previewLayer setFrame:self.view.bounds];
+    _selfBounds = self.view.bounds;
+    [_previewLayer setFrame:_selfBounds];
+    [self startOrAdjustLeaser];
     
     UIInterfaceOrientation orientation                = [UIApplication sharedApplication].statusBarOrientation;
     switch (orientation) {
@@ -177,7 +217,7 @@
         }
         
         if (detectionString != nil) {
-            [_session stopRunning];
+            [self stopScaning];
 #if DEBUG
             NSLog(@"\n%@", detectionString);
 #endif
@@ -190,5 +230,6 @@
         }
     }
     _highlightView.frame = highlightViewRect;
+    [self.view bringSubviewToFront:_highlightView];
 }
 @end
