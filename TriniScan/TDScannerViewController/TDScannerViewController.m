@@ -61,7 +61,7 @@
     [self.view addSubview:_highlightView];
     
     _device     = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    [self configureCameraForHighestFrameRate:_device];
+//    [self configureCameraForHighestFrameRate:_device];
     
     _session    = [AVCaptureSession new];
     
