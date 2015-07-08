@@ -108,6 +108,11 @@
     [self.view addSubview:_highlightView];
     
     _device     = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if(!_device) {
+        [self showDeviceNotSupportedAlert];
+        return;
+    }
+    
     _session    = [AVCaptureSession new];
     
     NSError *error = nil;
@@ -371,5 +376,11 @@
     }
     _highlightView.frame = highlightViewRect;
     [self.view bringSubviewToFront:_highlightView];
+}
+
+#pragma mark-
+- (void)showDeviceNotSupportedAlert {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"ERROR!" message:@"Device is not supported for scanning." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 @end
