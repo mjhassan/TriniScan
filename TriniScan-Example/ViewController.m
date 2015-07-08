@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "TDScannerViewController.h"
 
-@interface ViewController () <TDScannerViewControllerDelegate>
+@interface ViewController () <TriniScanDelegate>
 
 @end
 
@@ -20,13 +20,20 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)ShowScanner:(id)sender {
+- (IBAction)showAsModal:(id)sender {
     TDScannerViewController* scan = [[TDScannerViewController alloc] initWithNibName:@"TDScannerViewController~iPad" bundle:nil];
     scan.modalPresentationStyle   = UIModalPresentationFullScreen;
     scan.modalTransitionStyle     = UIModalTransitionStyleCoverVertical;
     [self presentViewController:scan animated:YES completion:nil];
     
     scan.delegate = self;
+}
+
+- (IBAction)showAsPush:(id)sender {
+    TDScannerViewController* scan = [[TDScannerViewController alloc] initWithNibName:@"TDScannerViewController~iPad" bundle:nil];
+    scan.delegate = self;
+    
+    [self.navigationController pushViewController:scan animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -33,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF6AE6DF1B4D230200779CC1 /* TriniScanProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriniScanProtocol.h; sourceTree = "<group>"; };
 		AFD81D2A1B4BDA9800FD49D5 /* TriniScan-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriniScan-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD81D431B4BDA9A00FD49D5 /* TriniScan-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TriniScan-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD81D591B4BDB4600FD49D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -146,6 +147,7 @@
 				AFD81D881B4C275100FD49D5 /* TDScannerViewController.m */,
 				AFD81D891B4C275100FD49D5 /* TDScannerViewController~iPad.xib */,
 				AFD81D8A1B4C275100FD49D5 /* TDScannerViewController~iPhone.xib */,
+				AF6AE6DF1B4D230200779CC1 /* TriniScanProtocol.h */,
 			);
 			path = TriniScanAPI;
 			sourceTree = SOURCE_ROOT;

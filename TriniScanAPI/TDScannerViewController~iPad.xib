@@ -16,14 +16,18 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-pL-vHt">
-                    <rect key="frame" x="714" y="25" width="40" height="30"/>
+                    <rect key="frame" x="8" y="25" width="70" height="22"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="PrJ-6y-dV7"/>
-                        <constraint firstAttribute="height" constant="30" id="cjB-R8-UYQ"/>
+                        <constraint firstAttribute="width" constant="70" id="kfc-ir-ph8"/>
+                        <constraint firstAttribute="height" constant="22" id="x7K-el-sw4"/>
                     </constraints>
                     <state key="normal" title="Close">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="close:" destination="-1" eventType="touchUpInside" id="2EL-HJ-hZb"/>
                     </connections>
@@ -31,8 +35,8 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="fpn-pL-vHt" secondAttribute="trailing" constant="14" id="aGx-5P-z5d"/>
-                <constraint firstItem="fpn-pL-vHt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="c8G-KU-e8K"/>
+                <constraint firstItem="fpn-pL-vHt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="G9P-9d-4Nm"/>
+                <constraint firstItem="fpn-pL-vHt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="z94-Zi-eWw"/>
             </constraints>
             <point key="canvasLocation" x="435" y="433"/>
         </view>

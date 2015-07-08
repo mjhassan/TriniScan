@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3G7-co-ONg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,24 +18,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-5V-84w">
-                                <rect key="frame" x="250" y="285" width="100" height="30"/>
-                                <state key="normal" title="Show Scanner">
+                                <rect key="frame" x="225" y="285" width="151" height="30"/>
+                                <state key="normal" title="Modal View Controller">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ShowScanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvh-TV-tTU"/>
+                                    <action selector="showAsModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZ8-ww-TCW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Scanner As:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pip-N5-4Ok">
+                                <rect key="frame" x="75" y="263" width="141" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cFR-Rw-DC3"/>
+                                    <constraint firstAttribute="width" constant="141" id="qiN-dT-lGy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEg-So-uLp">
+                                <rect key="frame" x="225" y="323" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="9Q3-5w-rEh"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tyo-uk-Jhh"/>
+                                </constraints>
+                                <state key="normal" title="Push View Controller">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAsPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeY-uW-qp0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pip-N5-4Ok" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="72k-x4-Gwv"/>
+                            <constraint firstItem="vMa-5V-84w" firstAttribute="baseline" secondItem="pip-N5-4Ok" secondAttribute="baseline" constant="26" id="9xV-ki-LrO"/>
+                            <constraint firstItem="lEg-So-uLp" firstAttribute="top" secondItem="vMa-5V-84w" secondAttribute="bottom" constant="8" id="Ee0-pB-i09"/>
+                            <constraint firstItem="vMa-5V-84w" firstAttribute="trailing" secondItem="lEg-So-uLp" secondAttribute="trailing" id="KCp-6f-9Kn"/>
                             <constraint firstAttribute="centerX" secondItem="vMa-5V-84w" secondAttribute="centerX" id="ebw-tF-OXD"/>
+                            <constraint firstItem="vMa-5V-84w" firstAttribute="top" secondItem="pip-N5-4Ok" secondAttribute="bottom" constant="1" id="jBq-aL-brR"/>
                             <constraint firstAttribute="centerY" secondItem="vMa-5V-84w" secondAttribute="centerY" id="qfa-b6-P5b"/>
+                            <constraint firstItem="vMa-5V-84w" firstAttribute="leading" secondItem="lEg-So-uLp" secondAttribute="leading" id="yYs-B8-zBK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Sl6-jS-eFp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1258" y="433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p7D-ui-DAx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3G7-co-ONg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyB-8S-WTU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wtc-9D-ZCF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PtH-GM-cSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="1094"/>
         </scene>
     </scenes>
 </document>
