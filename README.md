@@ -2,7 +2,7 @@
   <img src="https://avatars0.githubusercontent.com/u/4034940?v=3&u=a28131520ea991ad3e961c727329dd73cbb29bb9&s=140" alt="TriniScan for iOS" title="TriniScan for iOS">
 </p>
 
-`TriniScan` for iOS is a easy and powerful tool to enable barcode scanning feature to your iOS application. It scans popular barcodes, in real-time, very efficiently using device's buildin camera. It is fast, most acurate and customizable. It has implemented user interface, therefore inntergration is so quick.
+`TriniScan` for iOS is an easy and powerful tool to enable barcode scanning feature to your iOS application. It scans popular barcodes, in real-time, very efficiently using device's buildin camera. It is fast, most acurate and customizable. It has implemented user interface, therefore inntergration is so quick.
 
 Please [star it](https://github.com/mjhassan/TriniScan) on GitHub! If you found any bug or want to extend/modify some of it's feature then drop me a line @[my email](mailto:jahid_sust@hotmail.com). If you found it useful or already used in your app please let us know on Twitter @posaidon ( :) 'e' wasn't available, hence 'a' ). Enjoy.
 
